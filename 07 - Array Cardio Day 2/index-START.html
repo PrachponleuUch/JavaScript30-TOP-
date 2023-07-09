@@ -53,8 +53,15 @@
 
     console.log({findIDX});
 
-    comments.splice(findIDX, 1);
+    //comments.splice(findIDX, 1);
     console.table(comments);
+
+    const newComments = [
+      ...comments.slice(0, findIDX),
+      ...comments.slice(findIDX+1)
+    ];
+    console.table(newComments);
+    
   </script>
 </body>
 </html>
